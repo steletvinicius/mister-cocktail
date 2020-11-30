@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   # resources :cocktails, only: [:index, :show, :create] do
   #   resources :
   # end
-  get '/cocktails', to: 'cocktails#index'
+  # get '/cocktails', to: 'cocktails#index'
 
-  get '/cocktails/new', to: 'cocktails#new', as: :new_cocktail
-  post 'cocktails', to: 'cocktails#create'
+  # get '/cocktails/new', to: 'cocktails#new', as: :new_cocktail
+  # post 'cocktails', to: 'cocktails#create'
 
-  get '/cocktails/:id', to: 'cocktails#show', as: :cocktail
+  # get '/cocktails/:id', to: 'cocktails#show', as: :cocktail
 
+  resources :cocktails, only: [:index, :new, :create, :show] do
+    resources :doses, only: [:new, :create, :destroy]
+  end
 end
