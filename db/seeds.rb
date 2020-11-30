@@ -17,9 +17,13 @@ Ingredient.create(name: "Tequila")
 Ingredient.create(name: "orange juice")
 Ingredient.create(name: "Tomato Juice")
 
+puts "#{Ingredient.count} ingredients added."
+
 Cocktail.create(name: "Mojito")
 Cocktail.create(name: "Bloody Mary")
 Cocktail.create(name: "Margarita")
 Cocktail.create(name: "Pina Colada")
 
-p Ingredient.all
+puts "#{Cocktail.count} cocktails added."
+
+
